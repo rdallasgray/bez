@@ -80,3 +80,5 @@ Cubic-bezier easing as used in CSS3 is not as powerful or versatile as jQuery's 
 Acknowledgements
 ----------------
 I am not a mathematician, so I had to do a fair bit of Googling to get the maths (reasonably) right. Big thanks to Nikolay V. Nemshilov for this article: http://st-on-it.blogspot.com/2011/05/calculating-cubic-bezier-function.html.
+
+Also, after I posted this plugin, Janne Aukia got in touch to let me know about his similar plugin, Easie: https://github.com/jaukia/easie. It looks excellent, and uses a direct lift of the Webkit bezier timing code. It's a little larger than Bez, but does a little more.
