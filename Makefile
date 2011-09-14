@@ -22,7 +22,7 @@ version:
 min:
 	@@if test ! -z ${JS_ENGINE} && test ! -z ${COMPILER}; then \
 	echo "Minifying ${PROJECT}"; \
-	${COMPILER} ${SRC_DIR}/${MAIN}.js > ${BUILD_DIR}/${MAIN}.min.js; \
+	${COMPILER} ${BUILD_DIR}/${MAIN}.tmp > ${BUILD_DIR}/${MAIN}.min.js; \
 	else \
 		echo "You must have NodeJS and UglifyJS installed in order to minify ${PROJECT}."; \
 	fi
