@@ -8,5 +8,5 @@
  * See http://st-on-it.blogspot.com/2011/05/calculating-cubic-bezier-function.html
  * 
  * Copyright @YEAR Robert Dallas Gray. All rights reserved.
- * Provided under the FreeBSD license: https://github.com/rdallasgray/roto/blob/master/LICENSE.txt
+ * Provided under the FreeBSD license: https://github.com/rdallasgray/bez/blob/master/LICENSE.txt
 */
