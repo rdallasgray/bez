@@ -13,7 +13,7 @@ YEAR = $(shell date +"%Y")
 all: min bez
 
 min:
-	@@if test ! -z ${JS_ENGINE}; then \
+	@@if test ! -z ${JS_ENGINE} && test ! -z ${COMPILER}; then \
 	echo "Minifying Bez" ${MIN}; \
 	${COMPILER} ${SRC_DIR}/${BEZ}.js > ${BUILD_DIR}/${BEZ}.tmp; \
 	else \
