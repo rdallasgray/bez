@@ -2,6 +2,8 @@ What is Bez?
 ============
 Bez is a small plugin for jQuery which allows you to specify jQuery easing functions as cubic-bezier co-ordinates.
 
+You can see Bez in action in my Roto scrolling plugin: http://github.com/rdallasgray/roto.
+
 
 SHORT VERSION
 -------------
