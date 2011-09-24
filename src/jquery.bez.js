@@ -24,7 +24,7 @@ jQuery.extend({ bez: function(coOrdArray) {
 				},
 				xForT = function(t) {
 					var x = t, i = 0, z;
-					while (++i < 6) {
+					while (++i < 14) {
 						z = bezCoOrd(x, 0) - t;
 						if (Math.abs(z) < 1e-3) break;
 						x -= z / xDeriv(x);
