@@ -3,6 +3,7 @@
   "name": "bez",
   "description": "yep",
   "version": "0.0.0",
+  "main": "src/jquery.bez.js", 
   "repository": {
     "url": ""
   }
