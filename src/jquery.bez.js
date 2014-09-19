@@ -10,6 +10,7 @@
  * Copyright @YEAR Robert Dallas Gray. All rights reserved.
  * Provided under the FreeBSD license: https://github.com/rdallasgray/bez/blob/master/LICENSE.txt
 */
+module.exports = function(jQuery) {
 jQuery.extend({ bez: function(coOrdArray) {
 	var encodedFuncName = "bez_" + jQuery.makeArray(arguments).join("_").replace(/\./g, "p");
 	if (typeof jQuery.easing[encodedFuncName] !== "function") {
@@ -41,3 +42,4 @@ jQuery.extend({ bez: function(coOrdArray) {
 	}
 	return encodedFuncName;
 }});
+}
