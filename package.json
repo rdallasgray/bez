@@ -2,7 +2,7 @@
   "author": "",
   "name": "bez",
   "description": "yep",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "src/jquery.bez.js", 
   "repository": {
     "url": ""
