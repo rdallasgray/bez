@@ -8,3 +8,26 @@
     "url": ""
   }
 }  
+
+{
+  "name": "bez",
+  "description": "easing-bezier for jQuery",
+  "main": "src/jquery.bez.js",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrMoranXP/bez.git"
+  },
+  "devDependencies": {
+    
+  },
+  "maintainers": ["Ruslan Kaymakov <mrmoranxp@gmail.com>"],
+  "keywords": "jQuery, easing",
+  "bugs": {
+    "url": "https://github.com/MrMoranXP/bez/issues"
+  },
+  "dependencies": {
+
+  }
+}
