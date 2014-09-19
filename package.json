@@ -1,15 +1,4 @@
 {
-  "author": "",
-  "name": "bez",
-  "description": "yep",
-  "version": "0.1.0",
-  "main": "src/jquery.bez.js", 
-  "repository": {
-    "url": ""
-  }
-}  
-
-{
   "name": "bez",
   "description": "easing-bezier for jQuery",
   "main": "src/jquery.bez.js",
