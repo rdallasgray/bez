@@ -10,8 +10,11 @@
  * Copyright @YEAR Robert Dallas Gray. All rights reserved.
  * Provided under the FreeBSD license: https://github.com/rdallasgray/bez/blob/master/LICENSE.txt
 */
-jQuery.extend({ bez: function(coOrdArray) {
-	var encodedFuncName = "bez_" + jQuery.makeArray(arguments).join("_").replace(/\./g, "p");
+jQuery.extend({ bez: function(encodedFuncName, coOrdArray) {
+	if (jQuery.isArray(encodedFuncName)) {
+		coOrdArray = encodedFuncName;
+		encodedFuncName = 'bez_' + coOrdArray.join('_').replace(/\./g, 'p');
+	}
 	if (typeof jQuery.easing[encodedFuncName] !== "function") {
 		var	polyBez = function(p1, p2) {
 			var A = [null, null], B = [null, null], C = [null, null],
