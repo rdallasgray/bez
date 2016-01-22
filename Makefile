@@ -1,34 +1,17 @@
-PROJECT = Bez
-SRC_DIR = src
-BUILD_DIR = .
-MAIN = jquery.bez
+PROJECT=Bez
+SRC_DIR=src
+BUILD_DIR=lib
+MAIN=jquery.bez
+YEAR=$(shell date +"%Y")
+VERSION=$(shell node -pe "require('./package.json').version")
 
-JS_ENGINE ?= `which node nodejs`
-COMPILER ?= `which uglifyjs`
-
-VERSION = $(shell git describe --tags --long | sed s/\-/\./)
-YEAR = $(shell date +"%Y")
-
-all: main min clean
-
-nomin: main clean
-
-main: version
+all: version min
 
 version:
-	@@echo "Setting version number (${VERSION}) and year (${YEAR})"
-	@@sed 's/@VERSION/${VERSION}/' <${SRC_DIR}/${MAIN}.js | sed 's/@YEAR/${YEAR}/' > ${BUILD_DIR}/${MAIN}.tmp
+	@echo "Setting version number (${VERSION}) and year (${YEAR})" && \
+	sed 's/@VERSION/${VERSION}/' <${SRC_DIR}/${MAIN}.js | sed 's/@YEAR/${YEAR}/' > ${BUILD_DIR}/${MAIN}.js
 
 min:
-	@@if test ! -z ${JS_ENGINE} && test ! -z ${COMPILER}; then \
-	echo "Minifying ${PROJECT}"; \
-	${COMPILER} ${BUILD_DIR}/${MAIN}.tmp > ${BUILD_DIR}/${MAIN}.min.js; \
+	@echo "Minifying ${PROJECT}"; \
+	uglifyjs ${BUILD_DIR}/${MAIN}.js > ${BUILD_DIR}/${MAIN}.min.js; \
 	echo ";" >> ${BUILD_DIR}/${MAIN}.min.js; \
-	else \
-		echo "You must have NodeJS and UglifyJS installed in order to minify ${PROJECT}."; \
-	fi
-
-clean:
-	@@echo "Removing temp files"
-	@@rm -f ${BUILD_DIR}/${MAIN}.tmp
-	@@echo "Done"

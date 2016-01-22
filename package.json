@@ -1,0 +1,29 @@
+{
+  "name": "jquery-bez",
+  "version": "1.0.11",
+  "description": "Specify jQuery easing functions as cubic-bezier co-ordinates",
+  "main": "lib/jquery.bez.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdallasgray/bez.git"
+  },
+  "scripts": {
+    "build": "make"
+  },
+  "keywords": [
+    "jquery",
+    "animation",
+    "bezier",
+    "easing"
+  ],
+  "author": "Robert Dallas Gray",
+  "license": "FreeBSD",
+  "bugs": {
+    "url": "https://github.com/rdallasgray/bez/issues"
+  },
+  "homepage": "https://github.com/rdallasgray/bez",
+  "devDependencies": {
+    "jquery": "^2.2.0",
+    "uglifyjs": "^2.4.10"
+  }
+}
